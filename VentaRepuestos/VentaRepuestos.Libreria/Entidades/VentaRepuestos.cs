@@ -12,6 +12,7 @@ namespace VentaRepuestos.Libreria.Entidades
         private string _direccion;
         private List<Repuesto> _listaProductos;
 
+        //Creacion de propiedades de la clase VentaRepuestos
         public string NombreComercio
         {
             get { return _nombreComercio; }
@@ -21,5 +22,18 @@ namespace VentaRepuestos.Libreria.Entidades
         {
             get { return _direccion; }
         }
+
+        //Creacion de constructores
+        public VentaRepuestos()
+        { }
+        public VentaRepuestos(string nombreComercio, string direccionComercio)
+        {
+            _nombreComercio = nombreComercio;
+            _direccion = direccionComercio;
+            _listaProductos = new List<Repuesto>;
+
+        }
+
+        
     }
 }

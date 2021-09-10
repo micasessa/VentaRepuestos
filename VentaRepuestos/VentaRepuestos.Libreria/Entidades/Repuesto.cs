@@ -8,6 +8,7 @@
         private int _stock;
         private Categoria _categoria;
 
+        //Creacion de propiedades de la clase Repuesto
         public int CodigoRepuesto
         {
             get { return _codigo; }
@@ -28,6 +29,23 @@
             get { return _stock; }
         }
 
+        //Creacion de constructores
+        public Repuesto ()
+        { }
+
+        public Repuesto (int codigoRepuesto, string nombreRepuesto, double precioRepuesto,int stockRepuesto )
+        {
+            _codigo = codigoRepuesto;
+            _nombre = nombreRepuesto;
+            _precio = precioRepuesto;
+            _stock = stockRepuesto;
+            _categoria = new Categoria();
+        }
+        public string ToString(string nombre)
+        {
+            //Faltadesarrollar?
+            return nombre;
+        }
 
     }
 }
