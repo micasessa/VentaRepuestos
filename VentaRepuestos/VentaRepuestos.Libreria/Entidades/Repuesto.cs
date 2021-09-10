@@ -50,11 +50,12 @@ namespace VentaRepuestos.Libreria.Entidades
             _categoria = new Categoria();
         }
 
-        //Listar repuestos por categorias
-        public void ListarCategorias()
+        //creacion de metodo traercategoria para despues usarlo en clase ventarepuesto
+        public int TraerCategoria(int _categoria)
         {
-            List<Categoria> lista = _categoria.TraerCategoria();
-           
+
+            return _categoria;
         }
+
     }
 }

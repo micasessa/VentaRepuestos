@@ -11,7 +11,6 @@ namespace VentaRepuestos.Libreria.Entidades
     {
         private int _codigo;
         private string _nombre;
-        private List<Categoria> _listaCateg;
 
         //Creacion de propiedades de la clase Categoria
         public int Codigo
@@ -33,15 +32,6 @@ namespace VentaRepuestos.Libreria.Entidades
             _nombre = nombreCategoria;
         }
 
-        public List<Categoria> TraerCategoria()
-        {
-            if (_listaCateg.Count == 0)
-            {
-                return null; 
-            } else
-            {
-                return _listaCateg;
-            }            
-        }
+        
     }
 }
