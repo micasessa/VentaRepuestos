@@ -1,4 +1,11 @@
-﻿namespace VentaRepuestos.Libreria.Entidades
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace VentaRepuestos.Libreria.Entidades
 {
     public class Repuesto
     {
@@ -7,6 +14,7 @@
         private double _precio;
         private int _stock;
         private Categoria _categoria;
+        
 
         //Creacion de propiedades de la clase Repuesto
         public int CodigoRepuesto
@@ -41,11 +49,12 @@
             _stock = stockRepuesto;
             _categoria = new Categoria();
         }
-        public string ToString(string nombre)
-        {
-            //Faltadesarrollar?
-            return nombre;
-        }
 
+        //Listar repuestos por categorias
+        public void ListarCategorias()
+        {
+            List<Categoria> lista = _categoria.TraerCategoria();
+           
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace VentaRepuestos.Consola
     {
         static void Main(string[] args)
         {
+
+            
         }
     }
 }

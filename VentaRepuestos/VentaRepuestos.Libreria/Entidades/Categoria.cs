@@ -1,9 +1,17 @@
-﻿namespace VentaRepuestos.Libreria.Entidades
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace VentaRepuestos.Libreria.Entidades
 {
     public class Categoria
     {
         private int _codigo;
         private string _nombre;
+        private List<Categoria> _listaCateg;
 
         //Creacion de propiedades de la clase Categoria
         public int Codigo
@@ -23,6 +31,17 @@
         {
             _codigo = codigoCategoria;
             _nombre = nombreCategoria;
+        }
+
+        public List<Categoria> TraerCategoria()
+        {
+            if (_listaCateg.Count == 0)
+            {
+                return null; 
+            } else
+            {
+                return _listaCateg;
+            }            
         }
     }
 }
