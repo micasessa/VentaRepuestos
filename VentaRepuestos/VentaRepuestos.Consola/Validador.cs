@@ -8,6 +8,23 @@ namespace VentaRepuestos.Consola
 {
     class Validador
     {
+        public static int pedirMenu(string mensaje)
+        {
+            int opcMenu = 0;
+            do
+            {
+                Console.WriteLine(mensaje);
+                if (!int.TryParse(Console.ReadLine(), out opcMenu))
+                {
+                    opcMenu = -1;
+                }
+                if (opcMenu != 1 && opcMenu != 2 && opcMenu != 3 && opcMenu != 4 && opcMenu != 5) ;
+                {
+                    Console.WriteLine("Ingrese una opcion valida");
+                }
+            } while (opcMenu != 1 && opcMenu != 2 && opcMenu != 3 && opcMenu != 4 && opcMenu != 5));
+            return (opcMenu);
+        }
         public string pedirString(string mensaje)
         {
             string retorno = "";
@@ -22,7 +39,6 @@ namespace VentaRepuestos.Consola
             } while (retorno == "");
             return (retorno);
         }
-
         public int pedirInteger(string mensaje, int minimo, int maximo)
         {
             int numero = minimo - 1;
