@@ -51,6 +51,7 @@ namespace VentaRepuestos.Libreria.Entidades
         }
 
         //creacion de metodo traercategoria para despues usarlo en clase ventarepuesto
+        //FALTA DESARROLLO!
         public int TraerCategoria(int _categoria)
         {
 

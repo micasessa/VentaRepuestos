@@ -35,12 +35,19 @@ namespace VentaRepuestos.Libreria.Entidades
         }
 
         //Listar repuestos por categorias
+        //FALTA DESARROLLO
         public List<Repuesto> TraerPorCategoria(int cantidadCategorias)
         {
             List<Repuesto> list = _listaProductos.TraerCategoria();
 
 
             return cantidadCategorias;
+
+        }
+
+        //Agregar repuesto
+        public void AgregarRepuesto (Repuesto repuesto)
+        {
 
         }
     }
